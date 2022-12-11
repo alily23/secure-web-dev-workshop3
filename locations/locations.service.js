@@ -2,8 +2,9 @@
 
 const Location = require('./locations.model')
 
+//fonction pour importer la BDD puis return le tableau avec la BDD intégrée
 function findAll () {
-	return [1,2,3,4]
+	return Location.find()
 }
 
 module.exports.findAll = findAll

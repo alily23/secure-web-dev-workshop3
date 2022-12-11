@@ -3,10 +3,17 @@
 
 const router = require('express').Router()
 const locationsService = require('./locations.service')
+const passport = require('passport')
+const authorizationMiddleware = require('../authorization/authorization.middleware')
 
-router.get('/locations', (req, res) => {
+
+// sur le lien : http://localhost:3000/locations
+router.get('/locations',
+	passport.authenticate('local',{session: false}),
+	authorizationMiddleware.canAccess([]),
+	(req, res) => {
 	return res.status(200).send({locations: []})
+	// ce qui est affiché
 })
-
 
 module.exports = router
