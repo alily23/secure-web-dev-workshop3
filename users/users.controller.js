@@ -4,7 +4,7 @@ const passport = require('passport')
 
 router.post('/register', async (req, res) => {
     const user = await usersService.register(req.body?.username, req.body?.password)
-        res.status(200).send(user)
+    res.status(200).send(user)
 })
 
 router.post('/login',

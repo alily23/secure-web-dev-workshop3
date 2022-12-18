@@ -2,9 +2,9 @@
   "name": "secure-web-dev-workshop3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "API/index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node API/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,12 +18,15 @@
   "homepage": "https://github.com/RochMoreau/secure-web-dev-workshop3#readme",
   "dependencies": {
     "body-parser": "^1.20.1",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^6.6.1"
+    "express-session": "^1.17.3",
+    "mongoose": "^6.8.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "bcrypt": "^5.1.0",
+    "jest": "^29.3.1",
     "jsonwebtoken": "^8.5.1",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
